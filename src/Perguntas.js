@@ -1,3 +1,4 @@
+import react from "react";
 import React from "react"
 import Carta from "./Carta"
 export default function Perguntas({resultados, setResultados, resultadoPergunta,
@@ -21,6 +22,7 @@ export default function Perguntas({resultados, setResultados, resultadoPergunta,
       
    
     return(
+      <React.Fragment>
     <div className="perguntas">
         <div className="topoPerguntas"><img className="logoPerguntas" src="images/logo.png"/>
         <h1>ZapRecal</h1>
@@ -33,5 +35,7 @@ export default function Perguntas({resultados, setResultados, resultadoPergunta,
             thisIcon = {thisIcon} setThisIcon = {setThisIcon}/> 
           </div>)}
 
-          </div>)
+    </div> 
+     <div class="rodape"></div>
+          </React.Fragment>)
 }
