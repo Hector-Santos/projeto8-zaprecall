@@ -1,0 +1,134 @@
+
+body{
+    background-color: #FB6B6B;
+}
+
+.telaInicial, .perguntas{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+.perguntas{
+    justify-content: flex-start;
+    margin-top: 40px;
+}
+.logo{
+height: 150px;
+width: auto;
+}
+
+.pergunta li{
+margin-top: 25px;
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+align-items: center;
+background-color: white;
+padding-left: 10px;
+padding-right: 10px;
+box-sizing: border-box;
+
+width: 300px;
+height: 65px;
+
+background-color: #FFFFFF;
+box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.15);
+border-radius: 5px;
+
+font-family: 'Recursive', sans-serif;
+font-weight: 600;
+
+}
+
+.virada{
+    background-color: #FFFFD4 !important;
+    width: 299px !important;
+    height: 131px !important;
+}
+
+.pergunta{
+margin-top: 25px;  
+}
+.pergunta ion-icon{
+ font-size: 40px;
+}
+.verde{
+ color: #2FBE34!important;
+ text-decoration: dashed!important;
+}
+.vermelho{
+color: red !important;
+text-decoration: dashed!important;
+} 
+.laranja{
+color: orange !important;
+text-decoration: dashed!important;
+   }
+.iniciar{
+    height: 54px;
+    width: 246px;
+    color: #FB6B6B;
+    background-color: white;
+    font-family: 'Recursive', sans-serif;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 22px;
+    letter-spacing: 0em;
+    text-align: center
+
+}
+h1{
+    font-family: 'Righteous', cursive;
+    font-size: 35px;
+    font-weight: 400;
+    line-height: 45px;
+    text-align: center;
+    color: white;
+
+}
+.hidden{
+    display: none;
+}
+.topoPerguntas{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
+
+.btnVermelho, .btnLaranja, .btnVerde{
+    font-family: 'Recursive', sans-serif;
+    color: white;
+    height: 37px;
+    width: 85px;
+    border-radius: 5px;
+    
+
+}
+.btnVermelho{
+    background-color: red;
+
+}
+.btnLaranja{
+    background-color: orange;
+   
+}
+.btnVerde{
+    background-color: #2FBE34;
+    
+}
+.revirada{
+    display: flex;
+    flex-direction: column!important;
+    justify-content: space-between!important;
+}
+.botoes{
+display: flex;
+flex-direction: row;
+justify-content: space-around ;
+}
