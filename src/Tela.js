@@ -8,7 +8,7 @@ export default function Tela(){
     const [thisIcon, setThisIcon] = React.useState(["play-outline","play-outline","play-outline","play-outline","play-outline","play-outline","play-outline","play-outline"])
     
     
-     console.log(estadoTela)
+    console.log(estadoTela)
    return(estadoTela === 0 ?
     <TelaInicial estadoTela = {estadoTela} setEstadoTela= {setEstadoTela}/>
     :

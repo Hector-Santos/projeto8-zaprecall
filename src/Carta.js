@@ -1,10 +1,12 @@
 import React from "react"
 export default function Carta({carta, index, resultados, setResultados,
-     resultadoPergunta, setResultadoPergunta, thisIcon, setThisIcon}){
+     resultadoPergunta, setResultadoPergunta, thisIcon, setThisIcon, contador, setContador}){
     const [estadoCarta, setEstadoCarta] = React.useState(0)
+    const [color, setColor] = React.useState("")
     
     
     function gerenciarResposta(classeDaResposta){
+        setColor(classeDaResposta)
         setResultadoPergunta(classeDaResposta)
         let arrayAuxiliar = resultados; 
         arrayAuxiliar[index]=classeDaResposta;
@@ -19,21 +21,26 @@ export default function Carta({carta, index, resultados, setResultados,
             arrayAuxiliar2[i] = "help-circle"
     }
         }
-
-        
-        
         setThisIcon(arrayAuxiliar2)
         setResultados(arrayAuxiliar);
         setEstadoCarta(0)
+        setContador(contador+1)
+    }
+
+    function viracarta(){
+        if(resultados[index] === index){
+            setEstadoCarta(1)
+        }
     }
    
     console.log(resultados)
     return(
         estadoCarta === 0 ?
-        <li onClick={()=> setEstadoCarta(1)}
+        <li className ={color} onClick={()=> viracarta()}
         >Pergunta {index+1} <ion-icon  name={thisIcon[index]}></ion-icon></li> :
          estadoCarta === 1 ?
-        <li className = "virada" onClick={()=> setEstadoCarta(2)}>{carta.Q}</li> :
+        <li className = "virada" onClick={()=> setEstadoCarta(2)}><p>{carta.Q}</p> 
+        <img className="seta" src="images/setinha.png"/> </li> :
         <li className = "virada revirada">
             {carta.R}
             <div className="botoes">
